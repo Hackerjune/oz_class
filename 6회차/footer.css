@@ -1,0 +1,53 @@
+.detail{
+    list-style: none;
+    color: rgb(28, 28, 28);
+    text-decoration: none;
+    margin: 20px;
+}
+
+.appstore, .googleplay{
+    border: none;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.footer-menu{
+    max-width: 1000px;
+    margin: auto;
+    justify-content: space-between;
+    border-bottom-style: solid ;
+}
+
+.footer-menu-download{
+    justify-content: center;
+    margin-top: 34px;
+}
+
+.download-button{
+    margin: 0;
+}
+
+.googleplay:hover{
+    background-color: rgb(229, 229, 229);
+}
+
+.appstore:hover{
+    background-color: rgb(229, 229, 229);
+}
+
+.contact-menu-ele{
+    list-style: none;
+    
+}
+
+.contact-menu-bottom{
+    flex-direction: row;
+    row-gap: 5px;
+}
+
+.contact{
+    max-width: 960px;
+    margin: auto;
+}
