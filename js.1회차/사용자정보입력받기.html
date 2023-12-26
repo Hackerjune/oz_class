@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자정보입력받기</title>
+</head>
+<body>
+
+    <h1 id="name"></h1>
+    <p id="hobby"></p>
+    <p id="song"></p>
+   
+   
+   
+   
+    <script>
+
+        const nameele = document.querySelector("#name")
+        let name = prompt("이름을 입력하세요")
+        nameele.textContent = name
+
+        // 객체.textContent는 객체의 본래 내용을 다른 데이터로 교체하여 출력한다
+        // document.querySelector는 css 선택자를 지정한다
+
+        const hobbyele = document.querySelector("#hobby")
+        let hobby = prompt("취미를 입력하세요")
+        hobbyele.textContent = hobby
+
+        const songele = document.querySelector("#song")
+        let song = prompt("좋아하는 노래를 입력하세요")
+        songele.textContent = song
+
+    </script>
+</body>
+</html>
