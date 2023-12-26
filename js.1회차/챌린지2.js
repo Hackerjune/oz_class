@@ -21,7 +21,7 @@
 function question(candies, friends) {
     // 여기에서 코드 작성해주세요!
     let result;
-
+    result = Math.floor(candies / friends);
     return result;
 }
 
