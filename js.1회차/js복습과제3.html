@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js복습과제3</title>
+    <style>
+        div{
+            text-align: center;
+        }
+
+        .big-box{
+            position: relative;
+            margin-bottom: 10px;
+            width: 310px;
+            height: 35px;
+        }
+
+        .small-box{
+            position: relative;
+            width: 76.35px;
+            height: 35px;
+        }
+
+        #send{
+            position: relative;
+            margin-left: 230px;
+        }
+        #input{
+            margin-left: 220px;
+            margin-bottom: 17px;
+            background-color: rgba(0, 0,0,0);
+            border-radius: 10%;
+
+           
+        }
+
+        #region{
+            width: 322px;
+            height: 50px;
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .join{
+            margin-top: 10px;
+            border: none;
+        }
+
+        h2{
+            text-align: center;
+        }
+        
+        #backsheet{    
+            width: 400px;
+            height: 500px;
+            padding: 50px;
+            padding-left: 0;
+            padding-right: 0;
+            background-color: rgb(84, 161, 212);
+            border-radius: 3%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            box-shadow: 5px 5px rgb(205, 195, 195), 10px 10px skyblue
+            , 15px 15px rgb(165, 156, 156);
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="backsheet">
+        <h2>OZ초격차 회원가입</h2>
+        <div>
+            <input type="email" placeholder="이메일을 입력하세요." class="big-box"><br>
+            <input type="text" placeholder="이름을 입력하세요." class="big-box"><br>
+            <input type="password" placeholder="비밀번호를 입력하세요." class="big-box"><br>
+            <input type="password" placeholder="비밀번호를 다시 입력하세요." class="big-box"><br>
+        </div> 
+
+        <div>
+            <input type="text" class="small-box"> &nbsp; <span>-</span> &nbsp;
+            <input type="text" class="small-box"> &nbsp; <span>-</span> &nbsp;
+            <input type="text" class="small-box">
+        </div>
+
+        <div>
+            <p id="send"><button onclick="sendVerificationCode()"><strong>인증번호 전송</strong></button></p>
+            <button id="input" onclick="verifyCode()">
+                &nbsp; &nbsp; &nbsp;인증 완료&nbsp; &nbsp; &nbsp;
+            </button>
+        </div>
+
+        <div>
+            <select name="region" id="region">
+                <option value="title" disabled selected>
+                    <strong>-지역을 선택하세요-</strong>
+                </option>
+                <option value="seoul">서울</option>
+                <option value="busan">부산</option>
+            </select>
+        </div>
+
+        <div>
+            <input type="radio" name="sex" id="female">
+            <label for="female">여성</label>
+            <input type="radio" name="sex" id="male">
+            <label for="male">남성</label>
+        </div>
+        
+        <div class="join">
+            <button onclick="submitForm()"><strong>가입하기</strong></button>
+        </div>
+    </div>
+
+    <script>
+        function submitForm(){
+        // 가입하기 버튼 클릭 시 실행되는 함수
+        const email = document.querySelector('input[type="email"]').value;
+        const name = document.querySelector('input[type="text"]').value
+        const password = document.querySelector('input[type="password"]').value
+        const password2 = document.querySelector('input[type="password"]').value
+        const number = document.querySelector('.small-box').value;
+        const number2 = document.querySelector('.small-box').value
+        const number3 = document.querySelector('.small-box').value
+        const region = document.querySelector('#region').value
+        const sex = document.querySelector('input[type="radio"]').value
+        
+        console.log(email)
+        console.log(name)
+        console.log(password)
+        console.log(password2)
+        console.log(number)
+        console.log(number2)
+        console.log(number3)
+        console.log(region)
+        console.log(sex)
+
+        }
+
+
+        function sendVerificationCode() {
+            // 여기에 인증번호 전송 로직을 추가할 수 있습니다.
+            console.log("인증번호 전송");
+        }
+
+        function verifyCode() {
+            // 여기에 인증 완료 로직을 추가할 수 있습니다.
+            console.log("인증 완료");
+        }
+        
+    </script>
+</body>
+</html>
