@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js복습과제</title>
+</head>
+<body>
+   
+    <div class="학점표"></div>
+    <div class="학점"></div>
+
+    <script>
+        const 학점표 = document.querySelector(".학점표")
+        const 학점 = document.querySelector(".학점")
+        
+        let number = prompt("기말고사 점수를 입력하세요.")
+
+        if(number >= 90){
+            
+            document.write(`나의 기말고사 점수는 ${number}점, 학점은 A!!!`)
+        }
+        else if(80 <= number&&number <= 89){
+           
+            document.write(`나의 기말고사 점수는 ${number}점, 학점은 B!!!`)
+        }
+        else if(70 <= number&&number <= 79){
+           
+            document.write(`나의 기말고사 점수는 ${number}점, 학점은 C!!!`)
+        }
+        else if(60 <= number&&number <= 69){
+           
+            document.write(`나의 기말고사 점수는 ${number}점, 학점은 D!!!`)
+        }
+        else if(number < 60 ){
+            
+            document.write(`나의 기말고사 점수는 ${number}점, 학점은 F2!!!`)
+        }
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>별 트리</title>
+    <style>
+        body {
+            font-family: monospace;
+        }
+
+        div {
+            position: relative;
+            top: 200px;
+        }
+    </style>
+</head>
+<body>
+  
+    <div></div>
+    <script>
+      
+        let height = 5;
+
+        let result = '';
+
+        document.write("1번 별")
+        for (let i = 1; i <= height; i++) {
+            let spaces = ' '.repeat(height - i);  // 왼쪽에 공백 추가
+            let stars = '*'.repeat(2 * i - 1);    // 홀수 개의 별 추가
+            result += spaces + stars + '\n';      // 각 행을 결과에 추가
+        }
+
+        let preElement = document.createElement('pre');
+        preElement.textContent = result;
+        document.body.appendChild(preElement);
+
+        // // // // // // // // // // // //
+
+        let height2 = 6;
+
+        let result2 = '';
+
+        document.write("2번 별")
+        for(let i = 1; i <= height2; i++){
+            let spaces2 = ' '.repeat(height2 - 2 * i);
+            let stars2 = '*'.repeat(2 * i - 2);
+            result2 += spaces2 + stars2 + '\n';
+        }
+
+        let preElement2 = document.createElement('div')
+        preElement2.textContent = result2;
+        document.body.appendChild(preElement2);
+
+    </script>
+</body>
+</html>
