@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>몬스터 잡기 게임</title>
+</head>
+<body>
+    <div id="continer"></div>
+
+    <script>
+        let attack = parseInt(prompt("1회 공격 시 데미지는 얼마인가요?(양의 정수로 입력하시오)")) // prompt는 문자열로 반환 <-> 데미지는 숫자로 변경
+        let attackCount = 1 
+
+        let monsterHP = 100
+        const continer = document.querySelector("#continer")
+
+        if(1 <= attack&&attack <= 100){
+            document.write("<h1>몬스터 잡기 게임을 시작합니다!</h1>")
+
+        }else{
+            alert("데미지를 잘 못 입력하여 게임을 취소합니다")
+        }
+
+        while(monsterHP > 0){
+
+            document.write(`몬스터를 ${attackCount}회 공격했습니다! <br>`)
+
+            attackCount++
+
+            monsterHP -= attack
+            
+            document.write(`<h3>몬스터의 남은 HP는 ${monsterHP}입니다</h3> <br>`)
+
+        }
+
+        document.write("몬스터를 처치했습니다!")
+    </script>
+</body>
+</html>
