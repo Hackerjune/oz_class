@@ -7,7 +7,10 @@
 </head>
 <body>
     
-    <div id = continer></div>
+    <div id = continer>
+        <button>dd</button>
+
+    </div>
 
     <script>
         // 함수 정의하고 호출하기 
@@ -39,27 +42,44 @@
 
         //인수 반환
 
-        document.write( createParagraph("안녕", "red")  )        // 각 문자열들이 함수의 매개변수 안으로 들어간다
-        document.write(  createParagraph("ㅇㅇ", "blue"))
-        document.write( createParagraph("잘가", "green"))
+        // document.write( createParagraph("안녕", "red")  )        // 각 문자열들이 함수의 매개변수 안으로 들어간다
+        // document.write(  createParagraph("ㅇㅇ", "blue"))
+        // document.write( createParagraph("잘가", "green"))
 
 
-        function createParagraph(content, color){
-            const p = document.createElement("p")
-            p.style.color = color
-            p.textContent = content
-            document.querySelector("#continer").appendChild(p)
+        // function createParagraph(content, color){
+        //     const p = document.createElement("p")
+        //     p.style.color = color
+        //     p.textContent = content
+        //     document.querySelector("#continer").appendChild(p)
 
-            return `인사 ${content}, 색상 ${color}`
-        }
+        //     return `인사 ${content}, 색상 ${color}`
+        // }
 
         // function sample(){
         //     document.write("짜장면")
 
-        //     return "탕수육"
+        //     return "탕수육"  
+        //   document.write(sample())
         // }
 
-        document.write(sample())
+        ///////////////////////////////////////////////////////////////////
+
+        //이벤트 핸들링
+            
+        // 클릭, 키다운, 제출 이벤트
+
+            const handleClick = function(){
+                alert("환영합니다")
+             
+            }
+
+            const button = document.querySelector("button")
+
+            button.onclick = handleClick
+
+          
+
     </script>
 </body>
 </html>
