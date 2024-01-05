@@ -24,23 +24,44 @@
         const strongBth = document.getElementById("strong")
         const markBth = document.getElementById("mark")
 
-        spanBth.addEventListener('click', function(){
-            alert("안녕하세요")
-        })
-//  
-        function strongclick(){
-            alert("안녕하세요2")
+//         spanBth.addEventListener('click', function(){
+//             alert("안녕하세요")
+//         })
+// //  
+//         function strongclick(){
+//             alert("안녕하세요2")
+//         }
+
+//         strongBth.ondblclick = strongclick
+// //
+//         function createspan(){ 
+//            const span = document.createElement("span");
+//            span.textContent = "새로생겼습니다.";
+//            document.body.append(span);    
+//         }
+
+//         markBth.onclick = createspan
+
+        function handleClick(event){
+            if(event.target.id == "span"){
+                const span = document.createElement("span")
+                span.textContent = "span태그"
+                document.body.append(span)
+            }else if(event.target.id == "strong"){
+                const strong = document.createElement("strong")
+                strong.textContent = "strong태그"
+                document.body.append(strong)
+            }else if(event.target.id == "mark"){
+                const mark = document.createElement("mark")
+                mark.textContent = "mark태그"
+                document.body.append(mark)
+            }
         }
 
-        strongBth.ondblclick = strongclick
-//
-        function createspan(){ 
-           const span = document.createElement("span");
-           span.textContent = "새로생겼습니다.";
-           document.body.append(span);    
-        }
+        spanBth.addEventListener('click', handleClick)
+        strongBth.addEventListener('click', handleClick)
+        markBth.addEventListener('click', handleClick)
 
-        markBth.onclick = createspan
     </script>
 
 
