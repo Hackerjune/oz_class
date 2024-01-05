@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입폼</title>
+    <style>
+        div{
+        text-align: center;
+        margin: 50px;
+        }
+        
+        input{
+        width: 170px;
+        height: 25px;
+        margin: 3px;
+        }
+
+        .id{
+            margin-right: 18px;
+        }
+
+        .password{
+           margin-right: 31px;
+        }
+
+        .password2{
+            margin-right: 62px;
+        }
+
+        .number{
+            margin-right: 29px;
+        }
+
+        #work{
+            margin-right: 44px;
+            width: 178px;
+            height: 32px;
+        }
+
+        #male, #female{
+            width: 20px;
+            height: 13px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+           
+        }
+
+        .box{
+            margin: 0;
+            margin-right: 56px;
+        }
+
+        .email{
+            margin-right: 13px;
+        }
+
+        .introduce{
+            margin-right: 26px;   
+            height: 80px;
+        }
+
+        .box2{
+            margin: 0;
+        }
+
+        .button-box{
+            margin: 20px;
+            margin-right: 60px;
+        }
+
+        button{
+            width: 70px;
+            height: 30px;
+        }
+    </style>    
+<body>
+    <div class="continer">
+        <label for="id"><strong>아이디</strong></label>
+        <input type="text" placeholder="아이디" class="id">
+        <br>
+        <label for="password"><strong>비밀번호</strong></label>
+        <input type="password" placeholder="비밀번호" class="password">
+        <br>
+        <label for="password2"><strong>비밀번호 확인</strong></label>
+        <input type="password" placeholder="비밀번호를 확인하시오" class="password2">
+        <br>
+        <label for="name"><strong>이름</strong></label>
+        <input type="text" placeholder="사용자 이름" class="name">
+        <br>
+        <label for="number"><strong>전화번호</strong></label>
+        <input type="text" placeholder="휴대전화 번호" class="number"> 
+        <br>
+        <label for="workMathod"><strong>원하는 직무</strong></label>
+        <select name="work" id="work">
+            <option value="title" disabled selected class="workMathod">
+                <strong>-직무를 선택하시오-</strong>
+            </option>
+            <option value="undefined">미정</option>
+            <option value="front">프론트앤드</option> 
+        </select>
+        <br>
+        <div class="box">   
+            <label for="male"><strong>성별</strong></label>
+            <input type="radio" name="sex" id="male"> 
+            <label for="male">남자</label>    
+            <input type="radio" name="sex" id="female"> 
+            <label for="female">여자</label>
+        </div>    
+        <div class="box2">  
+            <label for="email"><strong>이메일</strong></label>
+            <input type="email" class="email">
+            <br>
+            <label for="introduce"><strong>자기소개</strong></label>
+            <input type="text" class="introduce">
+        </div>
+        <div class="button-box">
+            <button onclick="submitForm()">가입</button>
+            <button>리셋</button>
+        </div>
+        <footer class="print-box">
+
+        </footer>
+    </div>
+ 
+    
+
+
+    <script>
+        function submitForm(){
+            const id = document.querySelector(".id").value
+            const password = document.querySelector(".password").value      
+            const password2 = document.querySelector(".password2").value      
+            const name = document.querySelector(".name").value       
+            const number = document.querySelector(".number").value         
+            const work = document.querySelector("#work").value
+         
+            document.write(id, "<br>")
+            document.write(password, "<br>")
+            document.write(password2, "<br>")
+            document.write(name, "<br>")
+            document.write(number, "<br>")
+            document.write(work, "<br>")
+        }
+    </script>
+</body>
+</html>
