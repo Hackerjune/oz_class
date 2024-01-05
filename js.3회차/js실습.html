@@ -8,7 +8,7 @@
 <body>
     
     <div id = continer>
-        
+        <button></button>
 
     </div>
 
@@ -81,24 +81,47 @@
           
             //////// 생활코딩 실습 //////////
             
-            let n = 0
-            let count = 0 
-            function numbering(){
-                while(n <= 10){
-                    document.write(n)
-                    n ++
-                    count ++
-                    if(count === 5){
-                        document.write("<br>")
-                        count = 0
-                    }
-                }
+        //     let n = 0
+        //     let count = 0 
+        //     function numbering(){
+        //         while(n <= 10){
+        //             document.write(n)
+        //             n ++
+        //             count ++
+        //             if(count === 5){
+        //                 document.write("<br>")
+        //                 count = 0
+        //             }
+        //         }
                 
-            }
+        //     }
 
-          numbering()
+        //   numbering()
 
+        //////////////////////////////////////////////////////
 
+        //함수에서 return은 함수를 출력하고 끝냄
+
+        // function get_arguments(arg1, arg2){
+        //     return arg1*10+arg2;                    
+        // }
+                                            
+        // alert(get_arguments(1, 2));
+        // alert(get_arguments(3, 4));
+
+        // 함수는 함수를 포함한 변수를 호출하면 그 변수에 포함된 함수의 역할을 출력하는 것에 기여한다
+
+        ///////////////////////////////////////////
+
+        function letsClick(){
+            alert("안녕하세요")
+        }
+
+        const button = document.querySelector("button")
+        button.onclick = letsClick      // 이벤트 속성 방법
+        //타겟.on이벤트명 = 함수를 담고있는 변수
+
+         
     </script>
 </body>
 </html>

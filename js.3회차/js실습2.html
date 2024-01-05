@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <button id="span">SPAN</button>
+    <button id="strong">STRONG</button>
+    <button id="mark">MARK</button>
+
+    <hr>
+
+    <script>
+        const spanBth = document.getElementById("span")
+        const strongBth = document.getElementById("strong")
+        const markBth = document.getElementById("mark")
+
+        spanBth.addEventListener('click', function(){
+            alert("안녕하세요")
+        })
+//  
+        function strongclick(){
+            alert("안녕하세요2")
+        }
+
+        strongBth.ondblclick = strongclick
+//
+        function createspan(){ 
+           const span = document.createElement("span");
+           span.textContent = "새로생겼습니다.";
+           document.body.append(span);    
+        }
+
+        markBth.onclick = createspan
+    </script>
+
+
+</body>
+</html>
