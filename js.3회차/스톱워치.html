@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스톱워치</title>
+</head>
+<body>
+    <h1>스톱워치</h1>
+    <div>
+        <div class="stopwatch">0:0:0</div>
+        <div class="buttons">
+            <button class="btn start" onclick="start()">start</button>
+           
+            <button class="btn reset" onclick="reset()">reset</button>
+        </div>
+    </div>
+
+    <script>
+       
+       const stopwatch = document.querySelector(".stopwatch");
+       
+    
+       var s=0, m=0, h=0;
+       
+      
+
+       function start() {
+            timer();
+            setTimeout(start, 1000);
+       }
+
+      
+
+       function reset(){
+            s=0;
+            m=0;
+            h=0;
+       }
+
+       function timer(){
+        s++;
+            if(s === 60){
+                s = 0;
+                m++;
+            }
+
+            if(m === 60){
+                m = 0;
+                h++;
+            }
+
+            if(h === 60){
+                h = 0;
+            }
+
+            stopwatch.textContent = h + ":" + m + ":" + s;
+
+          
+       }
+
+
+
+      
+
+    </script>
+</body>
+</html>
