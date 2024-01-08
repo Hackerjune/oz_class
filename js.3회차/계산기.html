@@ -49,6 +49,7 @@
             border: none;
             border-radius: 5px;
             margin: 6px;
+            font-size: large;
         }
 
       
@@ -80,28 +81,43 @@
         <div class="calculator">
             <form name="forms">    
                 <div class="buttons">
-                    <input type="text" id="output">
-                    <input type="button" value="c" id="c">
-                    <input type="button" value="/" class="연산자 common">
-                    <input type="button" value="1" class="common">
-                    <input type="button" value="2" class="common">
-                    <input type="button" value="3" class="common">
-                    <input type="button" value="*" class="연산자 common">
-                    <input type="button" value="4" class="common">
-                    <input type="button" value="5" class="common">
-                    <input type="button" value="6" class="common">
-                    <input type="button" value="+" class="연산자 common">
-                    <input type="button" value="7" class="common">
-                    <input type="button" value="8" class="common">  
-                    <input type="button" value="9" class="common">
-                    <input type="button" value="-" class="연산자 common">
-                    <input type="button" value="." id="dot" class="common">  
-                    <input type="button" value="0" class="common">
-                    <input type="button" value="=" class="연산자 common" id="result">
+                    <form name="forms">
+                        <input type="text" id="output" name="output">
+                        <input type="button" value="c" id="c">
+                        <input type="button" value="/" class="연산자 common" onclick="document.forms.output.value+='/'">
+                        <input type="button" value="1" class="common" onclick="document.forms.output.value+='1'">
+                        <input type="button" value="2" class="common" onclick="document.forms.output.value+='2'">
+                        <input type="button" value="3" class="common" onclick="document.forms.output.value+='3'">
+                        <input type="button" value="*" class="연산자 common" onclick="document.forms.output.value+='*'">
+                        <input type="button" value="4" class="common" onclick="document.forms.output.value+='4'">
+                        <input type="button" value="5" class="common" onclick="document.forms.output.value+='5'">
+                        <input type="button" value="6" class="common" onclick="document.forms.output.value+='6'">
+                        <input type="button" value="+" class="연산자 common" onclick="document.forms.output.value+='+'">
+                        <input type="button" value="7" class="common" onclick="document.forms.output.value+='7'">
+                        <input type="button" value="8" class="common" onclick="document.forms.output.value+='8'">  
+                        <input type="button" value="9" class="common" onclick="document.forms.output.value+='8'">
+                        <input type="button" value="-" class="연산자 common" onclick="document.forms.output.value+='-'">
+                        <input type="button" value="." id="dot" class="common" onclick="document.forms.output.value+='.'">  
+                        <input type="button" value="0" class="common" onclick="document.forms.output.value+='0'">
+                        <input type="button" value="=" class="연산자 common" id="result" onclick="document.forms.output.value=eval(document.forms.output.value)">
+                    </form>
                 </div>
             </form>    
         </div>  
-
     </div>
+
+    <script>
+
+        const c = document.querySelector("#c")
+        const output = document.querySelector("#output")
+
+        function refresh(){
+            output.value = ' '
+        }
+
+        c.addEventListener('click', refresh)
+
+
+    </script>
 </body>
 </html>
