@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(1초후에 실행됨)카운트다운</title>
+    <style>
+        body{
+            background-color: rgb(245, 244, 244);
+        }
+
+        .countdown{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+            margin: auto;
+            margin-top: 40px;
+            background-color: white;
+            height: 170px;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 2px lightgrey;
+        }
+
+        .clock{
+            display: flex;
+            
+        }
+
+        .clock-section{
+            margin: 8px;
+        }
+
+        .value{
+            display: flex;
+            background-color: rgb(39, 38, 38);
+            color: rgb(247, 172, 34);
+            width: 66px;
+            height: 70px;
+            border-radius: 10px;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+        }
+
+        h2{
+            margin-bottom: 14px;
+        }
+
+        .clock-label{
+            font-size: smaller;
+            text-align: center;
+            margin-top: 3px;
+            
+        }
+
+        .date{
+            position: relative;
+            text-align: center;
+            top: 40px;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+  <div class="continer">
+    <div class="countdown">
+        <h2>Countdown to</h2>
+        <div class="clock">
+            <div class="clock-section">
+                <div id="days" class="value">00</div>
+                <div class="clock-label">DAYS</div>
+            </div>
+            <div class="clock-section">
+                <div id="hours" class="value">00</div>
+                <div class="clock-label">HOURS</div>
+            </div>
+            <div class="clock-section">
+                <div id="minutes" class="value">00</div>
+                <div class="clock-label">MINUTES</div>
+            </div>
+            <div class="clock-section">
+                <div id="seconds" class="value">00</div>
+                <div class="clock-label">SECONDS</div>
+            </div>
+        </div>    
+    </div>    
+    <div class="date">
+
+    </div>
+  </div>
+
+
+    <script>
+
+        // 1초 후에 실행
+
+        const date = document.querySelector(".date")
+       
+        setInterval(function Dday(){
+            const now = new Date()
+            date.textContent = now
+            const targetDate = new Date('2024/2/1/0:0:0')
+            const countdown = Math.abs(targetDate - now)
+        
+            const days = Math.floor( countdown/(1000*3600*24) )
+            const hours = Math.floor( countdown/(1000*3600) %24)
+            const minutes = Math.floor( countdown/(1000*60) %60)
+            const seconds = Math.floor( countdown/(1000) %60)
+
+            const day = document.querySelector("#days")
+            const hour = document.querySelector("#hours")
+            const minute = document.querySelector("#minutes")
+            const second = document.querySelector("#seconds")
+
+            day.textContent = days
+            hour.textContent = hours
+            minute.textContent = minutes
+            second.textContent = seconds
+        },1000)
+        
+    </script>
+</body>
+</html>
