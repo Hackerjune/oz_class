@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        var lol = {title : war}   
+
+
+        class CHAMP {
+            constructor(스킬1, 스킬2, 스킬3, 스킬4){    //매개변수를 선언 2
+                this.q = 스킬1;
+                this.w = 스킬2;                      // this는 객체를 가리키는 말이다 1
+                this.e = 스킬3;
+                this.r = 스킬4;                      // 매개변수값 출력 4
+            }
+        }
+
+        CHAMP.prototype.name = 'champion' // 부모유전자에 name값 정의 --> CHAMP라는 객체를 사용하는 모든 자식에게 name값 정의시켜줌
+
+        var Zak = new CHAMP('탄성주먹', '불안정 물질', '새총발사', '바운스') // 매개변수에 넣을 값을 지정 3
+        console.log(Zak);
+
+    </script>
+</body>
+</html>

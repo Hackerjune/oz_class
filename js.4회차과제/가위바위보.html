@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위바위보</title>
+</head>
+<body>
+    <div>
+        <h1>가위바위보게임</h1>
+        <p>(가위 / 바위 / 보) 중 입력하세요</p>
+        <input type="text" class="game">
+        <button onclick="get()">결과확인</button>
+        <p class="p"></p>
+    </div>
+
+    <script>
+
+        const p = document.querySelector(".p")
+
+        function get(){
+            const userPick = document.querySelector(".game").value;
+
+            var comPick;
+            var result;
+
+            const comValue =  Math.floor(Math.random() * 3 + 1) // 랜덤한 숫자 생성
+
+                if(comValue == 1){              // 랜덤한 숫자를 컴퓨터의 가위바위보 문자열로 변경
+
+                    comPick = "가위"
+                }else if(comValue == 2){
+
+                    comPick = "바위"
+                }else{
+
+                    comPick = "보"
+                }
+
+                    if(userPick == comPick){   // 결과
+
+                        result = "비겼습니다"
+                    }else if(userPick == "가위", comPick == "보"){
+                       
+                        result = "이겼습니다"
+                    }else if(userPick == "보", comPick == "가위"){
+
+                        result = "졌습니다"
+                    }else if(userPick == "바위", comPick == "보"){
+
+                        result = "졌습니다"
+                    }else if(userPick == "가위", comPick == "바위"){
+
+                        result = "졌습니다"
+                    }else if(userPick == "바위", comPick == "가위"){
+
+                        result = "이겼습니다"
+                    }else if(userPick == "보", comPick == "바위"){
+
+                        result = "이겼습니다"
+                    }
+            p.textContent = `당신의 선택: ${userPick} / 컴퓨터의 선택: ${comPick} / 결과: ${result}`
+        }
+
+    </script>
+</body>
+</html>

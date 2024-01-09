@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+div{
+    background-color: aqua;
+    display: none;
+    
+}
+
+.password{
+    background-color: aqua;
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <div class="aa">
+        <p>아이디를 입력하세요</p>
+        <input type="text" class="id">
+        <button onclick="알림창여닫이('none')">닫기</button>
+    </div>
+    <button onclick="알림창여닫이('block')">열기</button>
+
+    <div>
+        <input type="text" class="password">
+    </div>
+    <script>
+
+        function 알림창여닫이(구멍){
+            document.querySelector(".aa").style.display = 구멍
+        }
+
+        const id = document.querySelector(".id").value
+        const password = document.querySelector(".password")
+
+        if(id === 1){
+            document.querySelector(".aa").style.display = block
+
+        }else{
+            password.style.display = block
+        }
+    </script>
+</body>
+</html>
