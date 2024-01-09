@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>이미지멈춰</title>
+    <style>
+        .continer{
+            width: 230px;
+            height: 180px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="continer">
+
+    </div>
+    <button onclick="stop()">멈춰</button>
+
+    <script>
+
+      
+
+        let repeat = setInterval(function(){
+            const count = Math.floor(Math.random() * 3 + 1)
+            console.log(count);
+
+            if(count == 1){
+                document.querySelector(".continer").style.backgroundImage= "url(햄스터1.jpeg)"
+            }else if(count == 2){
+                document.querySelector(".continer").style.backgroundImage= "url(햄스터2.jpeg)"
+            }else if(count == 3){
+                document.querySelector(".continer").style.backgroundImage= "url(햄스터3.jpeg)"
+            }
+            
+        },1000)
+
+        function stop(){
+
+        clearInterval(repeat)    
+
+        }
+
+    </script>
 </body>
 </html>
