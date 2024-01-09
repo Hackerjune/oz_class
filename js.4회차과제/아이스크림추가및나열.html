@@ -7,10 +7,34 @@
 </head>
 <body>
    
+    <button onclick="get()">아이스크림 추가</button>
+    <button onclick="print()">아이스크림 이름 출력</button>
+    <button onclick="seeList()">아이스크림 목록 보기</button>
+    <h1 class="list"></h1>
 
     <script>
 
-        
+        let icecream = []
+
+        function get(){
+
+           icecream.push(`${prompt("추가하려는 아이스크림의 이름을 입력하세요(복수입력가능)")}`)
+
+        }
+
+
+        function print(){
+
+            alert(icecream)
+
+        }
+
+        function seeList(){
+
+            const iceList = document.querySelector(".list")
+            iceList.textContent = `목록 : ${icecream}`
+            
+        }
     </script>
 </body>
 </html>
