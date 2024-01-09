@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또번호추첨게임</title>
+    <style>
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button class="btn">추첨</button>
+        <p class="output"></p>
+        <p class="output2"></p>
+        <p class="output3"></p>
+        <p class="output4"></p>
+        <p class="output5"></p>
+        <p class="output6"></p>
+    </div>
+     <script>
+
+        const btn = document.querySelector(".btn")
+        const p = document.querySelector(".output")
+        const p2 = document.querySelector(".output2")
+        const p3 = document.querySelector(".output3")
+        const p4 = document.querySelector(".output4")
+        const p5 = document.querySelector(".output5")
+        const p6 = document.querySelector(".output6")
+
+        btn.addEventListener('click', () => {
+            p.textContent = Math.floor(Math.random() * 100 + 1)
+        
+        })
+
+        btn.addEventListener('click', () => {
+            p2.textContent = Math.floor(Math.random() * 100 + 1)
+        
+        })
+
+        btn.addEventListener('click', () => {
+            p3.textContent = Math.floor(Math.random() * 100 + 1)
+        
+        })
+
+        btn.addEventListener('click', () => {
+            p4.textContent = Math.floor(Math.random() * 100 + 1)
+        
+        })
+
+        btn.addEventListener('click', () => {
+            p5.textContent = Math.floor(Math.random() * 100 + 1)
+        
+        })
+
+        btn.addEventListener('click', () => {
+            p6.textContent = Math.floor(Math.random() * 100 + 1)
+        
+        })
+
+     </script>
+</body>
+</html>
