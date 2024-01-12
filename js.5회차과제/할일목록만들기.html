@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할일목록만들기</title>
+    <style>
+        .continer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: yellowgreen;
+            width: 300px;
+            height: 362px;
+            max-width: 320px;
+            margin: auto;
+            border-radius: 7px;
+            overflow: scroll;           /**투두 리스트가 화면 밖을 넘어가면 스크롤 할 수 있도록**/
+
+        }
+
+        .inputBox{
+            position: fixed;
+            top: 336.5px;
+        }
+
+        .input, .add{
+            height: 32px;
+            border: none;
+            border-radius: 7px;
+        }
+
+        .input{
+            height: 30px;
+            width: 221px;
+            position: relative;
+            left: -1px;
+            top: 1.5px;
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+        }
+
+        .add{
+            width: 70px;
+            background-color: olive;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            color: white;
+            position: relative;
+            top: 1.2px;
+        }
+
+        li{
+            color: white;
+            text-align: center;
+            font-size: large;
+            font-weight: 400;
+            list-style: none;
+            background-color: olive;
+            width: 150px;
+            height: 30px;
+            box-sizing: border-box;
+            padding-top: 7px;
+            margin: 10px;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="continer">
+        <h1>TO DO LIST</h1>
+        <ul class="todos">
+        </ul>
+        <div class="inputBox">
+            <input type="text" class="input" placeholder="TO DO...">
+            <button class="add" onclick="getValue()">추가</button>
+        </div>    
+    </div>
+
+
+    <script>
+        const fst = document.querySelector(".fst")
+        const snd = document.querySelector(".snd")
+        const trd = document.querySelector(".trd")
+
+        function getValue(){
+            const value = document.querySelector(".input").value;
+            const todosList = document.querySelector(".todos");
+
+            // Create a new li element
+            const newTodo = document.createElement("li");
+            newTodo.textContent = value;
+
+            // Append the new li element to the todosList
+            todosList.appendChild(newTodo);
+            JSON.stringify(value)
+
+            // Clear the input value
+            document.querySelector(".input").value = "";
+
+            localStorage.setItem(value, newTodo.textContent)
+
+            newTodo.addEventListener('click', function(){
+                newTodo.style.backgroundColor = "black"
+                const remover = document.createElement("button")
+                remover.textContent = "X"
+                remover.style.border = "none"
+                remover.style.backgroundColor = "green"
+                newTodo.appendChild(remover)
+                    remover.addEventListener('click', function(){
+                        newTodo.style.display = "none"
+                    })
+            })
+        }
+
+
+    </script>
+</body>
+</html>
