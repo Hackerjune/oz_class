@@ -5,7 +5,182 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>성적표</title>
 </head>
+<style>
+    .table{
+        border: solid 1px;
+        width: 200px;
+    }
+
+    tr{
+        text-align: center;
+    }
+
+    td{
+        border: solid;
+    }
+</style>
 <body>
+    <table class="table">
+        <tr>
+            <td><strong>이름</strong></td>
+            <td><strong>점수</strong></td>
+        </tr>
+        <tr>
+            <td class="onep">짱구</td>
+            <td class="one"></td>
+        </tr>
+        <tr>
+            <td class="twop">철수</td>
+            <td class="two"></td>
+        </tr>
+        <tr>
+            <td class="threep">맹구</td>
+            <td class="three"></td>
+        </tr>
+        <tr>
+            <td class="fourp">훈이</td>
+            <td class="four"></td>
+        </tr>
+        <tr>
+            <td class="fivep">유리</td>
+            <td class="five"></td>
+        </tr>
+        <tr>
+            <td class="sixp">수지</td>
+            <td class="six"></td>
+        </tr>
+        
+    </table>
     
+    <button onclick="showScore()">점수보기</button>
+    <button onclick="showGrade()">75점 넘는 사람 확인하기</button>
+
+    <div class="showBox"></div>
+    <div class="showBoxq"></div>
+    <div class="showBoxw"></div>
+    <div class="showBoxe"></div>
+    <div class="showBoxr"></div>
+    <div class="showBoxt"></div>
+    <script>
+
+        function showScore(){
+
+            const one = document.querySelector(".one")
+
+            var scores = Math.floor(Math.random() * 100 + 1)
+
+            one.textContent = scores;
+
+
+
+            const two = document.querySelector(".two")
+
+            var scores = Math.floor(Math.random() * 100 + 1)
+
+            two.textContent = scores;
+
+
+
+            const three = document.querySelector(".three")
+
+            var scores = Math.floor(Math.random() * 100 + 1)
+
+            three.textContent = scores;
+
+
+
+            const four = document.querySelector(".four")
+
+            var scores = Math.floor(Math.random() * 100 + 1)
+
+            four.textContent = scores;
+
+
+
+            const five = document.querySelector(".five")
+
+            var scores = Math.floor(Math.random() * 100 + 1)
+
+            five.textContent = scores;
+
+
+
+            const six = document.querySelector(".six")
+
+            var scores = Math.floor(Math.random() * 100 + 1)
+
+            six.textContent = scores;
+
+
+        }
+
+        function showGrade() {
+            const onep = document.querySelector(".onep");
+            const showBox = document.querySelector(".showBox");
+
+            if (parseInt(document.querySelector(".one").textContent) > 75) {
+                showBox.textContent = onep.textContent + "의 점수는 75점을 넘었습니다.";
+            } else {
+                showBox.textContent = "75점 미만";
+            }
+        
+
+        
+            const twop = document.querySelector(".twop");
+            const showBoxt = document.querySelector(".showBoxt");
+
+            if (parseInt(document.querySelector(".two").textContent) > 75) {
+                showBoxt.textContent = twop.textContent + "의 점수는 75점을 넘었습니다.";
+            } else {
+                showBoxt.textContent = "75점 미만";
+            }
+        
+
+        
+            const threep = document.querySelector(".threep");
+            const showBoxq = document.querySelector(".showBoxq");
+
+            if (parseInt(document.querySelector(".three").textContent) > 75) {
+                showBoxq.textContent =  threep.textContent + "의 점수는 75점을 넘었습니다.";
+            } else {
+                showBoxq.textContent = "75점 미만";
+            }
+        
+
+        
+            const fourp = document.querySelector(".fourp");
+            const showBoxw = document.querySelector(".showBoxw");
+
+            if (parseInt(document.querySelector(".four").textContent) > 75) {
+                showBoxw.textContent = fourp.textContent + "의 점수는 75점을 넘었습니다.";
+            } else {
+                showBoxw.textContent = "75점 미만";
+            }
+        
+
+        
+            const fivep = document.querySelector(".fivep");
+            const showBoxe = document.querySelector(".showBoxe");
+
+            if (parseInt(document.querySelector(".five").textContent) > 75) {
+                showBoxe.textContent = fivep.textContent + "의 점수는 75점을 넘었습니다.";
+            } else {
+                showBoxe.textContent = "75점 미만";
+            }
+        
+
+       
+            const sixp = document.querySelector(".sixp");
+            const showBoxr = document.querySelector(".showBoxr");
+
+            if (parseInt(document.querySelector(".six").textContent) > 75) {
+                showBoxr.textContent = sixp.textContent + "의 점수는 75점을 넘었습니다.";
+            } else {
+                showBoxr.textContent = "75점 미만";
+            }
+        }
+       
+        
+    </script>
 </body>
 </html>
