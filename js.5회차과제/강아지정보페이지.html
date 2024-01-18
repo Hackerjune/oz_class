@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강아지정보페이지</title>
+    <link rel="stylesheet" href="강아지정보페이지.css">
+</head>
+<body>
+   
+    <div class="continer">
+
+        <header class="header" id="header">
+            <div class="header__search">
+                <input type="text" id="filter-text">
+                <button id="filter-button" onclick="action()">필터링</button>
+            </div>
+            <div class="header__search">
+                <select name="" id="filter-select">
+                    <option value="">all</option>
+                </select>
+                <button onclick="reset()">리셋</button>
+            </div>
+        </header>
+
+        <main class="main" id="main">
+
+        </main>
+
+    </div>
+
+
+    <script src="강아지정보페이지.js"></script>
+</body>
+</html>
